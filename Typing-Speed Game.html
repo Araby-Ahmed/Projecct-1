@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Typing-Speed Game</title>
+  </head>
+  <body>
+    <div class="game">
+      <div class="name">Typing-Speed Game</div>
+      <div class="container">
+        <div class="message">
+          You are playing on
+          <span class="lvl"></span> Level & You Have
+          <span class="seconds"></span> Seconds To Type The Word
+        </div>
+        <div class="start">Start Playing</div>
+        <div class="the-word"></div>
+        <div class="input-king">
+          <input type="text" class="input" placeholder="Enter Word" />
+          <input
+            type="text"
+            class="input1"
+            placeholder="Arabic"
+            maxlength="0"
+          />
+        </div>
+        <div class="upcoming-words">Second Language</div>
+        <div class="upcoming-words-arabic">Arabic</div>
+        <div class="controls">
+          <div class="time">Time Left: <span></span> Seconds</div>
+          <div class="score">
+            Score: <span class="got">0</span> From <span class="total">0</span>
+          </div>
+        </div>
+        <div class="finish">
+          <div><section class="score1"></section></div>
+          <p>ad</p>
+          <span>X</span>
+        </div>
+        <div class="levels">
+          <section>
+            <label for="level-control">Level: </label>
+            <select name="lvl" id="level-control">
+              <option value="Easy">Easy</option>
+              <option value="Normal">Normal</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </section>
+          <div class="editing">
+            <button class="x">EXIT</button>
+            <button class="edit">Edit Mode</button>
+            <button class="removeAll">Remove All</button>
+            <button class="remove">Remove</button>
+            <button class="add">Add</button>
+          </div>
+        </div>
+        <div class="edit-mode"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

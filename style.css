@@ -1,0 +1,316 @@
+:root {
+  --main-color: #2196f3;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Tahoma, sans-serif;
+}
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+  transition: 1s;
+}
+.container {
+  margin: auto;
+  max-width: 900px;
+  overflow: hidden;
+}
+.name {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  transition: 4s;
+}
+.message {
+  background-color: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 0 5px 1px var(--main-color);
+}
+.message span {
+  font-weight: bold;
+  color: #009688;
+}
+.message span::before {
+  content: "[ ";
+}
+.message span::after {
+  content: " ]";
+}
+.start {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #009688;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 1px black;
+  user-select: none;
+}
+.start:hover {
+  background-color: #33333381;
+}
+.the-word {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--main-color);
+  user-select: none;
+  text-transform: lowercase;
+}
+.input-king {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.input {
+  margin: 15px;
+  display: none;
+  width: 100%;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  text-align: center;
+  text-transform: lowercase;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+}
+.input:focus {
+  outline: none;
+}
+.input1 {
+  margin: 15px;
+  display: none;
+  width: 100%;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  text-align: center;
+  text-transform: lowercase;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+}
+.input1:focus {
+  outline: none;
+}
+.upcoming-words {
+  background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: 2s;
+}
+.upcoming-words div {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 4px;
+  border-radius: 6px;
+}
+.upcoming-words-arabic {
+  background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: 2s;
+}
+.upcoming-words-arabic div {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 4px;
+  border-radius: 6px;
+}
+.controls {
+  display: none;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  transition: 2s;
+}
+.controls span {
+  font-weight: bold;
+  color: #009688;
+}
+.finish {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  z-index: 500;
+  position: absolute;
+  width: 40%;
+  margin: auto;
+  height: 400px;
+  left: 50%;
+  top: -500%;
+  border-radius: 6px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.finish span {
+  position: absolute;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 25px;
+  right: 2%;
+  top: 2%;
+  cursor: pointer;
+}
+.finish span:hover {
+  mix-blend-mode: difference;
+}
+.finish .score1 {
+  position: absolute;
+  margin: auto;
+  top: 25%;
+  right: 38%;
+}
+.good {
+  color: #ffffff;
+  background-color: #2195f3b0;
+  width: fit-content;
+  padding: 50px;
+  display: flex;
+  top: 40%;
+}
+.bad {
+  color: rgb(255, 255, 255);
+  background-color: #fc0000a9;
+  width: fit-content;
+  padding: 50px;
+  display: flex;
+  top: 40%;
+}
+.levels {
+  background-color: white;
+  position: relative;
+  margin-top: 15px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px;
+}
+.levels section {
+  display: flex;
+  align-items: center;
+}
+.levels label {
+  font-size: 45px;
+  margin-right: 15px;
+}
+.levels #level-control {
+  font-size: 20px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+}
+.editing {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.edit,
+.x {
+  background-color: #009688;
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.3s;
+  position: fixed;
+  top: 1%;
+  right: 1%;
+}
+.edit:hover {
+  background-color: #3333338a;
+}
+.x {
+  display: none;
+  opacity: 0;
+  background-color: rgb(137, 4, 4);
+}
+.x:hover {
+  background-color: #3333338a;
+}
+.add {
+  background-color: var(--main-color);
+  font-size: 30px;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.3s;
+  display: none;
+}
+.add:hover {
+  background-color: #3333338a;
+}
+.removeAll {
+  background-color: rgb(198, 14, 14);
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.3s;
+  display: none;
+}
+.removeAll:hover {
+  background-color: #3333338a;
+}
+.remove {
+  background-color: rgb(137, 25, 25);
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.3s;
+  display: none;
+}
+.remove:hover {
+  background-color: #3333338a;
+}
+
+.edit-mode {
+  font-size: 70px;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  transform: translateY(1000%);
+  transition: 1.5s;
+}
